@@ -25,7 +25,10 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#1A0F3B" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#1A0F3B", boxShadow: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ImportContactsIcon
@@ -83,7 +86,7 @@ function Navbar() {
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography
                     direction="row"
-                    justifyContent="center"
+                    justifyContent="space-evenly"
                     alignItems="center"
                     spacing={12}
                   >
