@@ -27,7 +27,8 @@ function Navbar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "#1A0F3B", boxShadow: "none" }}
+      sx={{ backgroundColor: "#1A0F3B", boxShadow: "none"}}
+      
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -42,12 +43,13 @@ function Navbar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              
               fontWeight: 700,
               letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
               flexGrow: 1,
+              fontFamily: "Poppins"
             }}
           >
             LearnCraft
@@ -85,10 +87,12 @@ function Navbar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography
-                    direction="row"
-                    justifyContent="space-evenly"
+                    direction="raw"
+                    justifyContent="center"
                     alignItems="center"
                     spacing={12}
+                    
+                    
                   >
                     {page}
                   </Typography>
@@ -108,8 +112,8 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
+              fontFamily: "Poppins",
+           
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
@@ -122,7 +126,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ marginLeft: "auto", color: "white", display: "block", pr: 5,  }}
               >
                 {page}
               </Button>
