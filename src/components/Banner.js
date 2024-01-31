@@ -16,7 +16,7 @@ export default function Banner() {
   const matches = useMediaQuery(theme.breakpoints.down("md"));
     return (
         <BannerContainer matches={matches}>
-            <BannerImage src="/Assets/Hero.png" alt="reading" />  
+            <BannerImage src="https://source.unsplash.com/random?wallpapers" />  
            <BannerContent>
             <BannerTitle variant="h3">
             Start to learn new languages

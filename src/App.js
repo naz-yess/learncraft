@@ -18,7 +18,7 @@ const App = () => (
       <Promotions />
       <About />
       <Contacts />
-    
+      <Course />
    
       </Box>
   </BrowserRouter>
