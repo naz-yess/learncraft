@@ -1,7 +1,10 @@
-import { useTheme } from "@mui/system";
-import { useMediaQuery } from "@mui/material";
+/*import { useTheme } from "@mui/system";
+import { useMediaQuery } from "@mui/material"; */
 import { BannerContainer, BannerContent, BannerTitle, BannerDescription, BannerImage, BannerButton } from "../styles/banner";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "@mui/system";
+import { useMediaQuery } from "@mui/material";
+
 
 export default function Banner() {
     const navigate = useNavigate();
@@ -9,11 +12,11 @@ export default function Banner() {
   const handleClick = () => {
     navigate("../components/Course.js");
   }
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
     return (
-        <BannerContainer>
-            <BannerImage src="./Assets/clip-summer-rest.png" alt="reading" />
+        <BannerContainer matches={matches}>
+            <BannerImage src="/Assets/Hero.png" alt="reading" />  
            <BannerContent>
             <BannerTitle variant="h3">
             Start to learn new languages

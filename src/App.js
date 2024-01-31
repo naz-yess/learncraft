@@ -12,16 +12,17 @@ const App = () => (
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Banner />} />
-       
-        <Route path='/About/:id' element={<About />} />
         <Route path='/Contacts/:id' element={<Contacts />} />
         <Route path='/Course/:id' element={<Course />} />
       </Routes>
       <Promotions />
-    </Box>
+      <About />
+      <Contacts />
+    
+   
+      </Box>
   </BrowserRouter>
 )
 export default App;
-
 
 

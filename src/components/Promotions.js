@@ -1,4 +1,4 @@
-import { Slide, Typography } from "@mui/material";
+import { Slide } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
 import { MessageText, PromotionsContainer } from "../styles/promotions";

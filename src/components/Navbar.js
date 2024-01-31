@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "#1A0F3B", boxShadow: "none"}}
+      sx={{ backgroundColor: "white"}}
       
     >
       <Container maxWidth="xl">
@@ -46,7 +46,7 @@ function Navbar() {
               
               fontWeight: 700,
               letterSpacing: ".1rem",
-              color: "inherit",
+              color: "#1A0F3B",
               textDecoration: "none",
               flexGrow: 1,
               fontFamily: "Poppins"
@@ -55,19 +55,21 @@ function Navbar() {
             LearnCraft
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}  >
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: '#1A0F3B' }}
+              
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton >
             <Menu
               id="menu-appbar"
+              
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
@@ -91,6 +93,8 @@ function Navbar() {
                     justifyContent="center"
                     alignItems="center"
                     spacing={12}
+                    sx={{ color: '#1A0F3B' }}
+                   
                     
                     
                   >
@@ -101,7 +105,7 @@ function Navbar() {
             </Menu>
           </Box>
           <ImportContactsIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+           sx={{ color: '#1A0F3B', display: { xs: "flex", md: "none", }, mr: 1, }}
           />
           <Typography
             variant="h5"
@@ -112,11 +116,10 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "Poppins",
-           
+              fontFamily: "Poppins",      
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
+              color: '#1A0F3B' 
             }}
           >
             LearnCraft
@@ -126,7 +129,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ marginLeft: "auto", color: "white", display: "block", pr: 5,  }}
+                sx={{ marginLeft: "auto",  display: "block", pr: 5,  color: '#1A0F3B', fontWeight: '700'  }}
               >
                 {page}
               </Button>

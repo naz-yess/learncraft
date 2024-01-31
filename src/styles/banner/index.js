@@ -30,7 +30,7 @@ export const BannerContent = styled(Box)(({ matches, theme }) => ({
    
   },
   [theme.breakpoints.down("sm")]: {
-    width: "320px",
+    width: "280px",
     gap: "15px",
 
    
@@ -38,7 +38,7 @@ export const BannerContent = styled(Box)(({ matches, theme }) => ({
 }));
 
 export const BannerImage = styled("img")(({ src, theme }) => ({
-  src: `url(src/Assets/clip-summer-rest.png)`,
+  src: `url(${src})`,
   // backgroundImage: `url(${src})`,
   // backgroundRepeat: "no-repeat",
   // backgroundPosition: "center",
@@ -47,7 +47,7 @@ export const BannerImage = styled("img")(({ src, theme }) => ({
     width: "350px",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "320px",
+    width: "280px",
     height: "300px",
   },
 }));
