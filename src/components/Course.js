@@ -54,6 +54,19 @@ const defaultTheme = createTheme();
 export default function Album() {
   const navigate = useNavigate();
 
+  const handleEnglishClick = () => {
+    navigate("/Course");
+  }
+
+  const handleGermanClick = () => {
+    navigate("/CourseGerman");
+  }
+
+
+  const handleKoreanClick = () => {
+    navigate("/CourseKorean");
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -61,7 +74,7 @@ export default function Album() {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: "background.paper",
+            
             pt: 8,
             pb: 6,
           }}
@@ -70,8 +83,9 @@ export default function Album() {
             <Typography
               component="h1"
               variant="h2"
-              align="center"
-              color="text.primary"
+              textAlign="center"
+              justifyContent={'center'}
+              color="white"
               gutterBottom
               sx={{
                 "@media (max-width:320px)": {
@@ -102,20 +116,23 @@ export default function Album() {
               <Button
                 variant="contained"
                 sx={{ backgroundColor: "#9FB1F9", borderRadius: "100px" }}
+                onClick={handleEnglishClick}
               >
                 English
               </Button>
               <Button
                 variant="contained"
                 sx={{ backgroundColor: "#9FB1F9", borderRadius: "100px" }}
+                onClick={handleGermanClick}
               >
                 German
               </Button>
               <Button
                 variant="contained"
                 sx={{ backgroundColor: "#9FB1F9", borderRadius: "100px" }}
+                onClick={handleKoreanClick}
               >
-                German
+                Korean
               </Button>
             </Stack>
           </Container>

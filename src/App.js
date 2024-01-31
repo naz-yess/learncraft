@@ -1,27 +1,29 @@
 
 
+
+import { About,  Contacts,  Course, Navbar}  from "./components";
 import { Box } from "@mui/material";
-import { Navbar, About, Contacts,  Course, Banner} from "./components";
+import Home from "../src/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Promotions from "./components/Promotions";
-
-
+import CourseGerman from "./components/CourseGerman";
+import CourseKorean from "./components/CourseKorean";
 const App = () => (
   <BrowserRouter>
-    <Box sx={{ backgroundColor: "#1a0f3b" }}>
-      <Navbar />
-      <Routes>
-        <Route exact path='/' element={<Banner />} />
-        <Route path='/Contacts/:id' element={<Contacts />} />
-        <Route path='/Course/:id' element={<Course />} />
-      </Routes>
-      <Promotions />
-      <About />
-      <Contacts />
-      <Course />
-   
-      </Box>
-  </BrowserRouter>
+  <Navbar />
+  <Box sx={{ backgroundColor: "#1a0f3b" }}>
+    <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/Home' element={<Home />} />
+      <Route exact path='/Navbar' element={<Navbar />} />
+      <Route path='/Contacts' element={<Contacts />} />
+      <Route path='/Course' element={<Course />} />
+      <Route path='/About' element={<About />} />
+      <Route path='/CourseGerman' element={<CourseGerman />} />
+      <Route path='/CourseKorean' element={<CourseKorean />} />
+    </Routes>
+ 
+    </Box>
+</BrowserRouter>
 )
 export default App;
 

@@ -39,14 +39,14 @@ export default function Contacts() {
             LearnCraft
           </Typography>
           <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" gap={2}>
-            <Link href="#" color="text.secondary" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
-              <InstagramIcon  />
+            <Link href="#"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+              <InstagramIcon   />
             </Link>
-            <Link href="#" color="text.secondary" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
-              <FacebookIcon />
+            <Link href="#"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+              <FacebookIcon  />
             </Link>
-            <Link href="#" color="text.secondary" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
-              <YouTubeIcon />
+            <Link href="#" color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+              <YouTubeIcon  />
             </Link>
           </Box>
         </Grid>

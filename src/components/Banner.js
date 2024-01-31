@@ -10,7 +10,7 @@ export default function Banner() {
     const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("../components/Course.js");
+    navigate("/Course");
   }
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));

@@ -40,7 +40,9 @@ export default function About() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+  
+    <ThemeProvider theme={defaultTheme} >
+      <Container id="about-section">
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
       />
@@ -66,7 +68,7 @@ export default function About() {
         </Typography>
       </Container>
 
-      <Container maxWidth="md" component="main">
+      <Container maxWidth="sm" component="main">
         <Grid
           container
           spacing={5}
@@ -99,10 +101,7 @@ export default function About() {
                     align: "center",
                   }}
                   sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === "light"
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[700],
+                    backgroundColor: "#94B1FE"
 
 
                   }}
@@ -136,6 +135,8 @@ export default function About() {
           ))}
         </Grid>
       </Container>
+      </Container>
     </ThemeProvider>
+  
   );
 }
