@@ -7,6 +7,7 @@ import Home from "../src/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CourseGerman from "./components/CourseGerman";
 import CourseKorean from "./components/CourseKorean";
+import NotFoundPage from "./buttons/ErrorButton";
 const App = () => (
   <BrowserRouter>
   <Navbar />
@@ -20,6 +21,7 @@ const App = () => (
       <Route path='/About' element={<About />} />
       <Route path='/CourseGerman' element={<CourseGerman />} />
       <Route path='/CourseKorean' element={<CourseKorean />} />
+      <Route path='/ErrorButton' element={<NotFoundPage />} />
     </Routes>
  
     </Box>

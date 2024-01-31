@@ -66,6 +66,9 @@ export default function Album() {
   const handleKoreanClick = () => {
     navigate("/CourseKorean");
   }
+  const handle404Click = () => {
+    navigate("/ErrorButton");
+  }
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -177,7 +180,7 @@ export default function Album() {
                     }}
                   >
                     <Button
-                      onClick={() => navigate(card.path)}
+                      onClick={handle404Click}
                       size="small"
                       sx={{
                         borderRadius: "20px",

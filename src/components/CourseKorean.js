@@ -15,37 +15,39 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CardHeader } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import NotFoundPage from "../buttons/ErrorButton";
+
 
 const cards = [
   {
     title: "Korean A1",
     subheader: "N/A",
-    path: "/english",
+    
   },
   {
     title: "Korean A2",
     subheader: "N/A",
-    path: "/russian",
+   
   },
   {
     title: "Korean B1",
     subheader: "N/A",
-    path: "/german",
+   
   },
   {
     title: "Korean B2",
     subheader: "N/A",
-    path: "/german",
+   
   },
   {
     title: "Korean C1",
     subheader: "N/A",
-    path: "/german",
+ 
   },
   {
     title: "Korean C2",
     subheader: "N/A",
-    path: "/german",
+   
   },
 ];
 
@@ -67,6 +69,11 @@ export default function Album() {
   const handleKoreanClick = () => {
     navigate("/CourseKorean");
   }
+
+  const handle404Click = () => {
+    navigate("/ErrorButton");
+  }
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -178,7 +185,7 @@ export default function Album() {
                     }}
                   >
                     <Button
-                      onClick={() => navigate(card.path)}
+                      onClick={ handle404Click}
                       size="small"
                       sx={{
                         borderRadius: "20px",

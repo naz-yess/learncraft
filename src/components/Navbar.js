@@ -15,12 +15,7 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  
 
   return (
     <AppBar position="static" sx={{ backgroundColor: 'white' }}>
@@ -76,10 +71,10 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem onClick={() => scrollToSection('about')}>
+              <MenuItem component={NavLink} to="/About">
                 <Typography textAlign="center">About</Typography>
               </MenuItem>
-              <MenuItem onClick={() => scrollToSection('contacts')}>
+              <MenuItem component={NavLink} to="/Contacts">
                 <Typography textAlign="center">Contacts</Typography>
               </MenuItem>
               <MenuItem component={NavLink} to="/course">
@@ -89,10 +84,10 @@ function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button sx={{ color: '#1A0F3B', fontWeight: 700 }} onClick={() => scrollToSection('about')}>
+            <Button component={NavLink} to="/About"  sx={{ color: '#1A0F3B', fontWeight: 700 }} >
               About
             </Button>
-            <Button sx={{ color: '#1A0F3B', fontWeight: 700 }} onClick={() => scrollToSection('contacts')}>
+            <Button  component={NavLink} to="/Contacts"  sx={{ color: '#1A0F3B', fontWeight: 700 }} >
               Contacts
             </Button>
             <Button component={NavLink} to="/course" sx={{ color: '#1A0F3B', fontWeight: 700 }}>
