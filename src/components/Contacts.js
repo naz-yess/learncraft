@@ -3,6 +3,7 @@ import { Container, Typography, Link, Grid, Box } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -23,6 +24,11 @@ function Copyright(props) {
 }
 
 export default function Contacts() {
+  const navigate = useNavigate();
+
+  const handle404Click = () => {
+    navigate("/ErrorButton");
+  }
   return (
     <Container
       maxWidth="md"
@@ -39,13 +45,13 @@ export default function Contacts() {
             LearnCraft
           </Typography>
           <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" gap={2}>
-            <Link href="#"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+            <Link href="https://www.instagram.com/n.yessenbay?igsh=MWRwZmg2N2wzMnI4eQ%3D%3D&utm_source=qr"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
               <InstagramIcon   />
             </Link>
-            <Link href="#"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+            <Link href="https://facebook.com"  color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
               <FacebookIcon  />
             </Link>
-            <Link href="#" color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
+            <Link href="https://youtube.com/@nazerkeesenbai411?si=AQWrSNk3GswyycOt" color="#94B1FE" sx={{ display: 'inline-flex', '&:hover': { color: 'white' } }}>
               <YouTubeIcon  />
             </Link>
           </Box>
@@ -56,12 +62,12 @@ export default function Contacts() {
           </Typography>
           <ul>
             <li>
-              <Link href="#" variant="subtitle1" sx={{color: 'white'}}>
+              <Link onClick={handle404Click}  variant="subtitle1" sx={{color: 'white'}} >
                 Privacy policy
               </Link>
             </li>
             <li>
-              <Link href="#" variant="subtitle1" sx={{color: 'white'}}>
+              <Link onClick={handle404Click} href="#" variant="subtitle1" sx={{color: 'white'}}>
                 Terms of use
               </Link>
             </li>
