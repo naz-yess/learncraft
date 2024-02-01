@@ -1,14 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { ButtonHeader, ButtonSubheader } from "../styles/buttons";
 
 const NotFoundPage = () => {
     return (
         <Box sx={{
-            margin: 'auto', textAlign:"center", padding: "200px", 
+            margin: 'auto', textAlign:"center", padding: "200px 0px", 
         }}>
-            <Typography variant="h1" sx={{fontSize: "48px",
-    color: "white"}}>404 - Not Found</Typography>
-            <Typography variant="h6" sx={{fontSize: "18px",
-    color: "lightgrey"}}>This page is in progress....</Typography>
+            <ButtonHeader variant="h1" sx={{
+    color: "white"}}>404 - Not Found</ButtonHeader>
+            <ButtonSubheader variant="h6" sx={{
+    color: "lightgrey"}}>This page is in progress....</ButtonSubheader>
         </Box>
     );
 };
