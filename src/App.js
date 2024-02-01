@@ -6,7 +6,7 @@ import CourseGerman from "./components/CourseGerman";
 import CourseKorean from "./components/CourseKorean";
 import NotFoundPage from "./buttons/ErrorButton";
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/project_react">
     <Box sx={{ backgroundColor: "#1a0f3b" }}>
     <Navbar />
       <Routes>
