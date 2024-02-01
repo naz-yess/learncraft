@@ -3,7 +3,7 @@
 
 import { About,  Contacts,  Course, Navbar}  from "./components";
 import { Box } from "@mui/material";
-import Home from "../src/Home"
+import Home from "./Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CourseGerman from "./components/CourseGerman";
 import CourseKorean from "./components/CourseKorean";
