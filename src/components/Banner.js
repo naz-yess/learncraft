@@ -24,7 +24,7 @@ export default function Banner() {
             <BannerDescription variant="subtitle">
             Welcome to LearnCraft Academy, your premier destination for unlocking the world of languages through the power of e-learning.
             </BannerDescription> 
-            <BannerButton variant="contained"
+            <BannerButton variant="contained" sx={{ display: 'flex', justifyItems: 'flex-start' }}
             onClick={handleClick}>
                 Get Started
             </BannerButton>

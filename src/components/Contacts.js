@@ -36,7 +36,8 @@ export default function Contacts() {
       sx={{
         borderTop: (theme) => `1px solid white`,
         mt: 8,
-        py: [3, 6],
+        py: [5, 17],
+        
       }}
     >
       <Grid container spacing={4} justifyContent="space-evenly">

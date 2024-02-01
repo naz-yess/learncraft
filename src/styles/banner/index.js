@@ -44,11 +44,11 @@ export const BannerImage = styled("img")(({ src, theme }) => ({
   // backgroundPosition: "center",
   width: "500px",
   [theme.breakpoints.down("md")]: {
-    width: "350px",
+    width: "300px",
   },
   [theme.breakpoints.down("sm")]: {
     width: "280px",
-    height: "300px",
+    height: "280px",
   },
 }));
 
@@ -57,11 +57,10 @@ export const BannerTitle = styled(Typography)(({ matches, theme }) => ({
   fontSize: "72px",
   marginBottom: "20px",
   color: "white",
-  fontFamily: '"Montez", "cursive"',
   justifyContent: "center",
   alignItems: "center",
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "42px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "35px",
   },
 }));
 
@@ -70,13 +69,13 @@ export const BannerDescription = styled(Typography)(({ theme }) => ({
   letterSpacing: 1.25,
   marginBottom: "3em",
   color: "white",
-  fontFamily: '"Montez", "cursive"',
   justifyContent: "center",
   alignItems: "center",
   [theme.breakpoints.down("md")]: {
     lineHeight: 1.15,
     letterSpacing: 1.15,
     marginBottom: "1.5em",
+    fontSize:"10px",
   },
 }));
 
@@ -86,18 +85,17 @@ export const BannerButton = styled(Button)(({ theme }) => ({
   borderRadius: "100px",
   fontWeight: "700",
   lineHeight: "150%",
-  fontFamily: "Inter",
   display: "flex",
   width: "250px",
   padding: "20px 0px",
   justifyContent: "center",
-  alignItems: "center",
+  textAlign: 'left',
   gap: "8px",
   ":hover": {
     backgroundColor: "#1A0F3B",
     color: "white",
   },
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     fontSize: "10px",
     width: "120px",
   },

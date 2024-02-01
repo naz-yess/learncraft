@@ -11,6 +11,7 @@ import StarIcon from "@mui/icons-material/StarBorder";
 import Typography from "@mui/material/Typography";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
+import { AboutUsSubtitle, AboutUsTitle, ButtonOfCard, ContentOfCard, ResponsiveHeaderOfCard} from "../styles/about";
 
 const tiers = [
   {
@@ -42,9 +43,9 @@ export default function About() {
   return (
   
     <ThemeProvider theme={defaultTheme} >
-      <Container id="about-section">
+      <Container id="about-section" sx={{ padding: '50px'}}> 
       <GlobalStyles
-        styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
+        styles={{ ul: { margin: 0, padding: 0, listStyle: "none" }}}
       />
       <CssBaseline />
       <Container
@@ -53,7 +54,7 @@ export default function About() {
         component="main"
         sx={{ pt: 8, pb: 6 }}
       >
-        <Typography
+        <AboutUsTitle 
           component="h1"
           variant="h3"
           align="center"
@@ -61,11 +62,11 @@ export default function About() {
           gutterBottom
         >
           About US
-        </Typography>
-        <Typography variant="subtitle" align="center" color="white" component="p">
+        </AboutUsTitle >
+        < AboutUsSubtitle  align="center" >
           Meet our exceptional team of dedicated educators, each bringing unique
           expertise and passion to inspire and empower every student.
-        </Typography>
+        </ AboutUsSubtitle >
       </Container>
 
       <Container maxWidth="sm" component="main">
@@ -92,7 +93,7 @@ export default function About() {
                   width: "100%", // ensure card takes up full width of Grid item
                 }}
               >
-                <CardHeader
+                <ResponsiveHeaderOfCard
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}
@@ -106,7 +107,7 @@ export default function About() {
 
                   }}
                 />
-                <CardContent sx={{ flexGrow: 1 }}>
+                <ContentOfCard sx={{ flexGrow: 1 }}>
                   <ul>
                     {tier.description.map((line) => (
                       <Typography
@@ -120,15 +121,15 @@ export default function About() {
                       </Typography>
                     ))}
                   </ul>
-                </CardContent>
+                </ContentOfCard>
                 <CardActions sx={{ mt: "auto" }}>
-                  <Button
+                  <ButtonOfCard
                     fullWidth
                     variant={tier.buttonVariant}
                     onClick={handleFirstEmailClick}
                   >
                     {tier.buttonText}
-                  </Button>
+                  </ButtonOfCard>
                 </CardActions>
               </Card>
             </Grid>
